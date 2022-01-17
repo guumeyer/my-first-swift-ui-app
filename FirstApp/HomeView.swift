@@ -15,7 +15,8 @@ struct HomeView: View {
         VStack {
             HStack {
                 Text("Watching")
-                    .font(.system(size: 20, weight: .bold))
+//                    .font(.system(size: 20, weight: .bold))
+                    .modifier(CustomFontModifier(size: 20))
                 
                 Spacer()
                 
@@ -38,6 +39,12 @@ struct HomeView: View {
             .padding(.horizontal)
             .padding(.leading, 14)
             .padding(.top, 30)
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                WatchRingViews()
+                    .padding(.horizontal, 30)
+                    .padding(.bottom, 30)
+            }
             
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 20) {
@@ -125,3 +132,69 @@ let sectionData = [
     Section(title: "Swift UI Advance 3", text: "15 Sections", logo: "Logo1", image: Image("Card5"), color: Color("card3")),
     Section(title: "Swift UI Advance 4", text: "15 Sections", logo: "Logo1", image: Image("Card6"), color: Color("card4"))
 ]
+
+struct WatchRingViews: View {
+    var body: some View {
+        HStack(spacing: 30) {
+            HStack(spacing: 12.0) {
+                RingView(
+                    color1: #colorLiteral(red: 0.482652545, green: 0.2100374699, blue: 1, alpha: 1),
+                    color2: #colorLiteral(red: 0.2408812046, green: 0.6738553047, blue: 1, alpha: 1),
+                    width: 44,
+                    height: 44,
+                    percent: 68,
+                    delay: 0.3,
+                    show: .constant(true)
+                )
+                
+                VStack(alignment: .leading, spacing: 4.0) {
+                    Text("6 minutes left")
+                        .bold()
+                        .modifier(FontModifier(style: .subheadline))
+                    
+                    
+                    Text("Watched 10 mins today")
+                        .modifier(FontModifier(style: .caption))
+                }
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack(spacing: 12.0) {
+                RingView(
+                    color1: #colorLiteral(red: 0.8085320592, green: 0.02182126231, blue: 0.3457722068, alpha: 1),
+                    color2: #colorLiteral(red: 0.9435996413, green: 0.3427492678, blue: 0.197148174, alpha: 1),
+                    width: 32,
+                    height: 32,
+                    percent: 54,
+                    delay: 0.3,
+                    show: .constant(true)
+                )
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            HStack(spacing: 12.0) {
+                RingView(
+                    color1: #colorLiteral(red: 0.4771556854, green: 0.8402735591, blue: 0.9841188788, alpha: 1),
+                    color2: #colorLiteral(red: 0.5499526858, green: 0.3519915342, blue: 0.9708355069, alpha: 1),
+                    width: 32,
+                    height: 32,
+                    percent: 32,
+                    delay: 0.3,
+                    show: .constant(true)
+                )
+            }
+            .padding(8)
+            .background(.white)
+            .cornerRadius(20)
+            .modifier(ShadowModifier())
+            
+            
+        }
+    }
+}

@@ -193,12 +193,11 @@ struct BottomCardView: View {
             
             Text("This certificate proof that Gustavo has achived the UI Design course")
                 .foregroundColor(Color("secondary"))
-                
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
                 .lineSpacing(4)
             
-            HStack {
+            HStack(spacing: 20.0) {
                 
                 RingView(
                     color1: #colorLiteral(red: 0.2408812046, green: 0.6738553047, blue: 1, alpha: 1),
@@ -209,6 +208,20 @@ struct BottomCardView: View {
                     delay: 0.3,
                     show: $show
                 )
+                
+                VStack(alignment: .leading, spacing: 8.0) {
+                    Text("SwiftUI")
+                        .fontWeight(.bold)
+                    Text("12 of 12 section completed\n10 hours spent so far")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                        .lineSpacing(4)
+                }
+                .padding(20)
+                .background(.white)
+                .cornerRadius(20)
+                .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 10)
+                
             }
 //
             
