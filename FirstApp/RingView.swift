@@ -13,7 +13,10 @@ struct RingView: View {
     var width: CGFloat = 300
     var height: CGFloat = 300
     var percent: CGFloat = 44
+    
+    var delay: Double = 0.0
    
+    @Binding var show:Bool // @State when control by the view and @Binding by external code
     
     var body: some View {
         let multiplier = width / 44
@@ -26,7 +29,7 @@ struct RingView: View {
                 .frame(width: width, height: height)
             
             Circle()
-                .trim(from: progress, to: 1 ) // progression - hide part the circle, 0.2 represents 80% and 0.9 - 10%
+                .trim(from: show ? progress : 1, to: 1 ) // progression - hide part the circle, 0.2 represents 80% and 0.9 - 10%
                 .stroke(
                     LinearGradient(
                         gradient:
@@ -43,21 +46,25 @@ struct RingView: View {
                             dash: [20, 0], dashPhase: 0
                         )
                 )
+                .animation(Animation.easeInOut.delay(delay), value: show) // Since Xcode 12, the animation modifier needs to be added after the stroke modifier
                 .rotationEffect(.degrees(90))
                 .rotation3DEffect(.degrees(180), axis: (x: 1, y: 0, z: 0) )
                 .frame(width: width, height: height)
-            .shadow(color: Color(color1).opacity(0.1),
+                .shadow(color: Color(color1).opacity(0.1),
                     radius: 3 * multiplier, x: 0, y: 3 * multiplier)
             
             Text("\(Int(percent))%")
                 .font(.system(size: 14 * multiplier))
                 .fontWeight(.bold)
+                .onTapGesture {
+                    self.show.toggle()
+                }
         }
     }
 }
 
 struct RingView_Previews: PreviewProvider {
     static var previews: some View {
-        RingView()
+        RingView(show: .constant(true))
     }
 }
