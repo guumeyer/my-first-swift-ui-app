@@ -87,7 +87,7 @@ struct ContentView: View {
             // display the bottom view height position during the drag action
 //            Text("\(bottomViewState.height)").offset(y: -300)
             
-        BottomCardView()
+        BottomCardView(show: $showCard )
                 .offset(x: 0, y: showCard ? 360 : 1000)
                 .offset(y: bottomViewState.height)
                 .blur(radius: show ? 20 : 0)
@@ -182,6 +182,7 @@ struct TitleView: View {
 }
 
 struct BottomCardView: View {
+    @Binding var show: Bool
     var body: some View {
         VStack(spacing: 20) {
             Rectangle()
@@ -196,6 +197,20 @@ struct BottomCardView: View {
                 .multilineTextAlignment(.center)
                 .font(.subheadline)
                 .lineSpacing(4)
+            
+            HStack {
+                
+                RingView(
+                    color1: #colorLiteral(red: 0.2408812046, green: 0.6738553047, blue: 1, alpha: 1),
+                    color2: #colorLiteral(red: 0.2206805944, green: 0.1452613175, blue: 0.8561988473, alpha: 1),
+                    width: 88,
+                    height: 88,
+                    percent: 78,
+                    delay: 0.3,
+                    show: $show
+                )
+            }
+//
             
             Spacer()
         }
