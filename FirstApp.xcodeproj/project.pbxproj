@@ -45,6 +45,7 @@
 		FFBA4785278DED9F002E1ABF /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA4784278DED9F002E1ABF /* FirstAppUITests.swift */; };
 		FFBA4787278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA4786278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift */; };
 		FFC30858278EE5E1001DCDAA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC30857278EE5E1001DCDAA /* MenuView.swift */; };
+		FFD980E0279683BC0008AD5F /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD980DF279683BC0008AD5F /* CourseList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +109,7 @@
 		FFBA4786278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FFC30856278E46E3001DCDAA /* FirstApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstApp.entitlements; sourceTree = "<group>"; };
 		FFC30857278EE5E1001DCDAA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		FFD980DF279683BC0008AD5F /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +213,7 @@
 				FF29EFEC27953717006C5D79 /* UpdateStore.swift */,
 				FF29EFEE27953CAB006C5D79 /* TabBar.swift */,
 				FF5E0CF2279617F9003DD2ED /* Modifier.swift */,
+				FFD980DF279683BC0008AD5F /* CourseList.swift */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				FF29EFEF27953CAB006C5D79 /* TabBar.swift in Sources */,
 				FF77CB3D2793BE8F00BEC976 /* UpdateDetail.swift in Sources */,
 				FFBA476C278DED9E002E1ABF /* ContentView.swift in Sources */,
+				FFD980E0279683BC0008AD5F /* CourseList.swift in Sources */,
 				FFB1D60C278EF58800E95B45 /* Home.swift in Sources */,
 				FFB1D6102793755100E95B45 /* UpdateList.swift in Sources */,
 				FF29EFED27953717006C5D79 /* UpdateStore.swift in Sources */,
