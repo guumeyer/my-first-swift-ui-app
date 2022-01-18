@@ -16,7 +16,7 @@ struct CourseList: View {
                 Text("Courses")
                     .font(.largeTitle)
                     .bold()
-                    .frame(minWidth: .infinity, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.leading, 30)
                     .padding(.top, 30)
                 
