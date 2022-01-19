@@ -18,6 +18,11 @@ struct TabBar: View {
                 Image(systemName: "rectangle.stack.fill")
                 Text("Certificates")
             }
+            
+//            CourseList().tabItem {
+//                Image(systemName: "rectangle.stack.fill")
+//                Text("Courses")
+//            }
         }
         .edgesIgnoringSafeArea(.top)
     }

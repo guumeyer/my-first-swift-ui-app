@@ -9,29 +9,39 @@ import SwiftUI
 
 struct CourseList: View {
     @State var courses: [Course] = courseData
+    @State var active = false
     
     var body: some View {
-        ScrollView {
-            VStack (spacing: 30) {
-                Text("Courses")
-                    .font(.largeTitle)
-                    .bold()
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.leading, 30)
-                    .padding(.top, 30)
-                
-                ForEach(courses.indices, id: \.self) { index in
-                    GeometryReader { geometry in
-                        CourseView(show: $courses[index].show, course: courses[index])
-                            .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+        ZStack {
+            Color.black.opacity(active ? 0.5 : 0)
+                .animation(.linear, value: active)
+                .edgesIgnoringSafeArea(.all)
+            
+            ScrollView {
+                VStack (spacing: 30) {
+                    Text("Courses")
+                        .font(.largeTitle).bold()
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                        .padding(.top, 30)
+                        .blur(radius: active ? 20 : 0)
+                    
+                    ForEach(courses.indices, id: \.self) { index in
+                        GeometryReader { geometry in
+                            CourseView(show: $courses[index].show, course: courses[index], active: $active)
+                                .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                        }
+    //                    .frame(height: courses[index].show ? screen.height : 280)
+                        .frame(height: 280)
+                        .frame(maxWidth: courses[index].show ? .infinity : screen.width - 60)
+                        .zIndex(courses[index].show ? 1 : 0) // move card to on top of others
                     }
-//                    .frame(height: courses[index].show ? screen.height : 280)
-                    .frame(height: 280)
-                    .frame(maxWidth: courses[index].show ? .infinity : screen.width - 60)
                 }
+                .frame(width: screen.width)
+                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0), value: self.courses)
             }
-            .frame(width: screen.width)
-            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0), value: self.courses)
+            .statusBar(hidden: active ? true : false)
+        .animation(.linear, value: active)
         }
     }
 }
@@ -45,6 +55,7 @@ struct CourseList_Previews: PreviewProvider {
 struct CourseView: View {
     @Binding var show: Bool // Display view in full screen mode
     var course: Course
+    @Binding var active: Bool
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -112,6 +123,7 @@ struct CourseView: View {
             .shadow(color: Color(course.color).opacity(0.3), radius: 20, x: 0, y: 20)
             .onTapGesture {
                 show.toggle()
+                active.toggle()
             }
         
         }
