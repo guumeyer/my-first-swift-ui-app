@@ -10,6 +10,7 @@ import SwiftUI
 struct CourseList: View {
     @State var courses: [Course] = courseData
     @State var active = false
+    @State var activeIndex = -1
     
     var body: some View {
         ZStack {
@@ -28,8 +29,21 @@ struct CourseList: View {
                     
                     ForEach(courses.indices, id: \.self) { index in
                         GeometryReader { geometry in
-                            CourseView(show: $courses[index].show, course: courses[index], active: $active)
-                                .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                            let hideNonActiveCard = activeIndex != index && active
+                            CourseView(
+                                show: $courses[index].show,
+                                course: courses[index],
+                                active: $active,
+                                index: index,
+                                activeIndex: $activeIndex
+                            )
+                            .offset(y: courses[index].show ? -geometry.frame(in: .global).minY : 0)
+                            // Set opacity when show another card in full mode
+                            .opacity(hideNonActiveCard ? 0 : 1)
+                            // Aminate decrease scale when open another card
+                            .scaleEffect(hideNonActiveCard ? 0.5 : 1)
+                            // Move the cards to right when open another card
+                            .offset(x: hideNonActiveCard ? screen.width : 0)
                         }
     //                    .frame(height: courses[index].show ? screen.height : 280)
                         .frame(height: 280)
@@ -38,9 +52,9 @@ struct CourseList: View {
                     }
                 }
                 .frame(width: screen.width)
-                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0), value: self.courses)
+                .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration: 0), value: courses)
             }
-            .statusBar(hidden: active ? true : false)
+            .statusBar(hidden: active)
         .animation(.linear, value: active)
         }
     }
@@ -56,6 +70,8 @@ struct CourseView: View {
     @Binding var show: Bool // Display view in full screen mode
     var course: Course
     @Binding var active: Bool
+    var index: Int
+    @Binding var activeIndex: Int
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -77,7 +93,6 @@ struct CourseView: View {
             .clipShape(RoundedRectangle(cornerRadius: 30, style: .continuous))
             .shadow(color: .black.opacity(0.2), radius: 20, x: 0, y: 20)
             .opacity( show ? 1 : 0)
-            
             
             VStack {
                 HStack(alignment: .top) {
@@ -124,6 +139,7 @@ struct CourseView: View {
             .onTapGesture {
                 show.toggle()
                 active.toggle()
+                activeIndex = show ? index : -1
             }
         
         }
