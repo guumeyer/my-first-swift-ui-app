@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF13E32E2798BE1200A77DF2 /* CourseDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF13E32D2798BE1200A77DF2 /* CourseDetail.swift */; };
 		FF29EFED27953717006C5D79 /* UpdateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29EFEC27953717006C5D79 /* UpdateStore.swift */; };
 		FF29EFEF27953CAB006C5D79 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29EFEE27953CAB006C5D79 /* TabBar.swift */; };
 		FF29EFF12795D5B8006C5D79 /* RingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF29EFF02795D5B8006C5D79 /* RingView.swift */; };
@@ -33,7 +34,10 @@
 		FF5E0D1F27961DAF003DD2ED /* WorkSans-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF5E0D0927961DAF003DD2ED /* WorkSans-Italic-VariableFont_wght.ttf */; };
 		FF5E0D2027961DAF003DD2ED /* OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF5E0D0A27961DAF003DD2ED /* OFL.txt */; };
 		FF5E0D2127961DB0003DD2ED /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF5E0D0B27961DAF003DD2ED /* README.txt */; };
+		FF6893A0279D26F9002DD42F /* CourseStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF68939F279D26F9002DD42F /* CourseStore.swift */; };
 		FF77CB3D2793BE8F00BEC976 /* UpdateDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF77CB3C2793BE8F00BEC976 /* UpdateDetail.swift */; };
+		FF8B94BA279E9B1E00026BAD /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF8B94B9279E9B1E00026BAD /* BlurView.swift */; };
+		FF95AECE279E940100A847A2 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = FF95AECD279E940100A847A2 /* SDWebImageSwiftUI */; };
 		FFB1D60C278EF58800E95B45 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1D60B278EF58800E95B45 /* Home.swift */; };
 		FFB1D60E278F7B3200E95B45 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1D60D278F7B3200E95B45 /* HomeView.swift */; };
 		FFB1D6102793755100E95B45 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB1D60F2793755100E95B45 /* UpdateList.swift */; };
@@ -45,6 +49,10 @@
 		FFBA4785278DED9F002E1ABF /* FirstAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA4784278DED9F002E1ABF /* FirstAppUITests.swift */; };
 		FFBA4787278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFBA4786278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift */; };
 		FFC30858278EE5E1001DCDAA /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC30857278EE5E1001DCDAA /* MenuView.swift */; };
+		FFCF3FF6279BDFBA00ABBC1E /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF3FF5279BDFBA00ABBC1E /* Data.swift */; };
+		FFCF3FF8279BE3EA00ABBC1E /* PostList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF3FF7279BE3EA00ABBC1E /* PostList.swift */; };
+		FFCF3FFA279BF04100ABBC1E /* PostDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFCF3FF9279BF04100ABBC1E /* PostDataStore.swift */; };
+		FFCF3FFD279C6F3D00ABBC1E /* Contentful in Frameworks */ = {isa = PBXBuildFile; productRef = FFCF3FFC279C6F3D00ABBC1E /* Contentful */; };
 		FFD980E0279683BC0008AD5F /* CourseList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD980DF279683BC0008AD5F /* CourseList.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF13E32D2798BE1200A77DF2 /* CourseDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDetail.swift; sourceTree = "<group>"; };
 		FF29EFEC27953717006C5D79 /* UpdateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStore.swift; sourceTree = "<group>"; };
 		FF29EFEE27953CAB006C5D79 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		FF29EFF02795D5B8006C5D79 /* RingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingView.swift; sourceTree = "<group>"; };
@@ -93,7 +102,9 @@
 		FF5E0D0A27961DAF003DD2ED /* OFL.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OFL.txt; sourceTree = "<group>"; };
 		FF5E0D0B27961DAF003DD2ED /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		FF5E0D2227961E39003DD2ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FF68939F279D26F9002DD42F /* CourseStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseStore.swift; sourceTree = "<group>"; };
 		FF77CB3C2793BE8F00BEC976 /* UpdateDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateDetail.swift; sourceTree = "<group>"; };
+		FF8B94B9279E9B1E00026BAD /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		FFB1D60B278EF58800E95B45 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		FFB1D60D278F7B3200E95B45 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FFB1D60F2793755100E95B45 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
@@ -109,6 +120,9 @@
 		FFBA4786278DED9F002E1ABF /* FirstAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		FFC30856278E46E3001DCDAA /* FirstApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FirstApp.entitlements; sourceTree = "<group>"; };
 		FFC30857278EE5E1001DCDAA /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		FFCF3FF5279BDFBA00ABBC1E /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		FFCF3FF7279BE3EA00ABBC1E /* PostList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostList.swift; sourceTree = "<group>"; };
+		FFCF3FF9279BF04100ABBC1E /* PostDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataStore.swift; sourceTree = "<group>"; };
 		FFD980DF279683BC0008AD5F /* CourseList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +131,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF95AECE279E940100A847A2 /* SDWebImageSwiftUI in Frameworks */,
+				FFCF3FFD279C6F3D00ABBC1E /* Contentful in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,23 +213,29 @@
 		FFBA4768278DED9E002E1ABF /* FirstApp */ = {
 			isa = PBXGroup;
 			children = (
-				FF5E0D2227961E39003DD2ED /* Info.plist */,
-				FF5E0CF427961DAF003DD2ED /* Work_Sans */,
 				FFC30856278E46E3001DCDAA /* FirstApp.entitlements */,
 				FFBA4769278DED9E002E1ABF /* FirstAppApp.swift */,
-				FFBA476B278DED9E002E1ABF /* ContentView.swift */,
-				FF29EFF02795D5B8006C5D79 /* RingView.swift */,
-				FFC30857278EE5E1001DCDAA /* MenuView.swift */,
 				FFBA476D278DED9F002E1ABF /* Assets.xcassets */,
-				FFBA476F278DED9F002E1ABF /* Preview Content */,
+				FF8B94B9279E9B1E00026BAD /* BlurView.swift */,
+				FFBA476B278DED9E002E1ABF /* ContentView.swift */,
+				FF13E32D2798BE1200A77DF2 /* CourseDetail.swift */,
+				FFD980DF279683BC0008AD5F /* CourseList.swift */,
+				FF68939F279D26F9002DD42F /* CourseStore.swift */,
+				FFCF3FF5279BDFBA00ABBC1E /* Data.swift */,
 				FFB1D60B278EF58800E95B45 /* Home.swift */,
 				FFB1D60D278F7B3200E95B45 /* HomeView.swift */,
-				FFB1D60F2793755100E95B45 /* UpdateList.swift */,
-				FF77CB3C2793BE8F00BEC976 /* UpdateDetail.swift */,
-				FF29EFEC27953717006C5D79 /* UpdateStore.swift */,
-				FF29EFEE27953CAB006C5D79 /* TabBar.swift */,
+				FF5E0D2227961E39003DD2ED /* Info.plist */,
+				FFC30857278EE5E1001DCDAA /* MenuView.swift */,
 				FF5E0CF2279617F9003DD2ED /* Modifier.swift */,
-				FFD980DF279683BC0008AD5F /* CourseList.swift */,
+				FFCF3FF9279BF04100ABBC1E /* PostDataStore.swift */,
+				FFCF3FF7279BE3EA00ABBC1E /* PostList.swift */,
+				FFBA476F278DED9F002E1ABF /* Preview Content */,
+				FF29EFF02795D5B8006C5D79 /* RingView.swift */,
+				FF29EFEE27953CAB006C5D79 /* TabBar.swift */,
+				FF77CB3C2793BE8F00BEC976 /* UpdateDetail.swift */,
+				FFB1D60F2793755100E95B45 /* UpdateList.swift */,
+				FF29EFEC27953717006C5D79 /* UpdateStore.swift */,
+				FF5E0CF427961DAF003DD2ED /* Work_Sans */,
 			);
 			path = FirstApp;
 			sourceTree = "<group>";
@@ -259,6 +281,10 @@
 			dependencies = (
 			);
 			name = FirstApp;
+			packageProductDependencies = (
+				FFCF3FFC279C6F3D00ABBC1E /* Contentful */,
+				FF95AECD279E940100A847A2 /* SDWebImageSwiftUI */,
+			);
 			productName = FirstApp;
 			productReference = FFBA4766278DED9E002E1ABF /* FirstApp.app */;
 			productType = "com.apple.product-type.application";
@@ -331,6 +357,10 @@
 				Base,
 			);
 			mainGroup = FFBA475D278DED9E002E1ABF;
+			packageReferences = (
+				FFCF3FFB279C6F3D00ABBC1E /* XCRemoteSwiftPackageReference "contentful.swift" */,
+				FF95AECC279E940100A847A2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+			);
 			productRefGroup = FFBA4767278DED9E002E1ABF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -396,15 +426,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF29EFF12795D5B8006C5D79 /* RingView.swift in Sources */,
+				FFCF3FF8279BE3EA00ABBC1E /* PostList.swift in Sources */,
 				FF29EFEF27953CAB006C5D79 /* TabBar.swift in Sources */,
 				FF77CB3D2793BE8F00BEC976 /* UpdateDetail.swift in Sources */,
 				FFBA476C278DED9E002E1ABF /* ContentView.swift in Sources */,
+				FF8B94BA279E9B1E00026BAD /* BlurView.swift in Sources */,
 				FFD980E0279683BC0008AD5F /* CourseList.swift in Sources */,
 				FFB1D60C278EF58800E95B45 /* Home.swift in Sources */,
+				FF6893A0279D26F9002DD42F /* CourseStore.swift in Sources */,
 				FFB1D6102793755100E95B45 /* UpdateList.swift in Sources */,
+				FFCF3FF6279BDFBA00ABBC1E /* Data.swift in Sources */,
+				FFCF3FFA279BF04100ABBC1E /* PostDataStore.swift in Sources */,
 				FF29EFED27953717006C5D79 /* UpdateStore.swift in Sources */,
 				FF5E0CF3279617F9003DD2ED /* Modifier.swift in Sources */,
 				FFC30858278EE5E1001DCDAA /* MenuView.swift in Sources */,
+				FF13E32E2798BE1200A77DF2 /* CourseDetail.swift in Sources */,
 				FFB1D60E278F7B3200E95B45 /* HomeView.swift in Sources */,
 				FFBA476A278DED9E002E1ABF /* FirstAppApp.swift in Sources */,
 			);
@@ -741,6 +777,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FF95AECC279E940100A847A2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		FFCF3FFB279C6F3D00ABBC1E /* XCRemoteSwiftPackageReference "contentful.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/contentful/contentful.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FF95AECD279E940100A847A2 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FF95AECC279E940100A847A2 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		FFCF3FFC279C6F3D00ABBC1E /* Contentful */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FFCF3FFB279C6F3D00ABBC1E /* XCRemoteSwiftPackageReference "contentful.swift" */;
+			productName = Contentful;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FFBA475E278DED9E002E1ABF /* Project object */;
 }

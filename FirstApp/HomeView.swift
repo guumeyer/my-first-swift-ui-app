@@ -26,10 +26,11 @@ struct HomeView: View {
                     
                     Button(action: { self.showUpdate.toggle() }) {
                         Image(systemName: "bell")
-                            .renderingMode(.original)
+//                            .renderingMode(.original)
+                            .foregroundColor(.primary)
                             .font(.system(size: 16, weight: .medium))
                             .frame(width: 36, height: 36)
-                            .background(.white)
+                            .background(Color("background3"))
                             .foregroundColor(.black)
                             .clipShape(Circle())
                             .shadow(color: .black.opacity(0.1), radius: 1, x: 0, y: 1)
@@ -91,6 +92,7 @@ struct HomeView: View {
                 
                 Spacer()
             }
+            .frame(width: screen.width)
         }
     }
 }
@@ -179,7 +181,7 @@ struct WatchRingViews: View {
                 }
             }
             .padding(8)
-            .background(.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -195,7 +197,7 @@ struct WatchRingViews: View {
                 )
             }
             .padding(8)
-            .background(.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
             
@@ -211,11 +213,9 @@ struct WatchRingViews: View {
                 )
             }
             .padding(8)
-            .background(.white)
+            .background(Color("background3"))
             .cornerRadius(20)
             .modifier(ShadowModifier())
-            
-            
         }
     }
 }
